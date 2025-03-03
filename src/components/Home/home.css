@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 50px;
+}
+
+.laptop {
+  width: 50vw;
+  height: auto;
+  object-fit: cover;
+}
+
+.laptop-animation {
+  width: auto; /* Adjust based on your design */
+  height: auto;
+}
+
+.text-section {
+  width: 40vw;
+  text-align: left;
+}
+
+.hello {
+  font-family: cursive;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.description {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: white;
+}
+
+.text-section h2 {
+  font-size: 5rem;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 2px white; /* Outline effect */
+  transition: color 0.3s ease-in-out, -webkit-text-stroke 0.3s ease-in-out;
+}
+
+.text-section h2:hover {
+  color: rgb(230, 37, 237); /* Fills text on hover */
+  -webkit-text-stroke: 0px; /* Removes outline */
+}

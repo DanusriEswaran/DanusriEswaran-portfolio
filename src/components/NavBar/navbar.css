@@ -1,97 +1,104 @@
 .navbar {
-  background: rgb(30, 30, 30);
   height: 5rem;
   width: 100vw;
-  max-width: 75rem;
-  margin: 0 auto;
+  font-family: "Noto Serif Todhri", serif;
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 3;
+  z-index: 100;
+  background: rgba(10, 10, 30, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: background 0.3s ease-in-out;
 }
 
-.logo {
-  object-fit: cover;
-  height: 4rem;
-  width: 4rem;
+.logo-animation {
+  height: 200%;
+  width: auto;
+}
+
+.desktopMenu {
+  display: flex;
+  align-items: center;
+}
+
+.menuIcon {
+  margin-right: 10px;
 }
 
 .desktopMenuListItem {
-  margin: 1rem;
+  margin: 1rem 1.5rem;
   cursor: pointer;
+  color: rgb(127, 10, 166);
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
 }
 
-.desktopMenuListItem:hover {
-  color: rgb(241, 150, 226);
-  padding-bottom: 0.5rem;
-  border-bottom: 3px solid rgb(105, 33, 93);
-}
-
-.desktopMenuBtn {
-  background: #fff;
-  color: #000;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1rem;
-  border-radius: 2rem;
-}
-
-.desktopMenuImg {
-  object-fit: cover;
-  height: 2rem;
-  width: 2rem;
-  margin: 1rem;
-}
-
+.desktopMenuListItem:hover,
 .active {
-  color: rgb(241, 150, 226);
-  padding-bottom: 0.5rem;
-  border-bottom: 3px solid rgb(241, 150, 226);
+  color: rgb(255, 100, 255);
+  border-bottom: 2px solid rgb(150, 50, 200);
 }
 
-.mobMenu {
+.desktopMenuListItem,
+.listItem {
+  text-decoration: none;
+  font-family: "Noto Serif Todhri", serif;
+  font-size: large;
+  font-weight: 500;
+  font-style: normal;
+  color: rgb(241, 145, 225);
+}
+
+.mobMenuIcon {
+  color: rgb(218, 45, 149);
+  cursor: pointer;
   display: none;
-  object-fit: cover;
-  height: 7rem;
-  width: 3rem;
 }
 
+/* Mobile Menu */
 .navMenu {
+  max-height: 300px;
+  overflow-y: auto;
   position: absolute;
   top: 4rem;
   right: 2rem;
-  z-index: 2;
-  display: flex;
+  display: none;
   flex-direction: column;
-  padding: 0.5rem;
-  height: fit-content;
-  min-width: 15rem;
-  background: rgb(40, 40, 40);
-  border-radius: 1rem;
+  padding: 0.8rem;
+  background: rgba(20, 20, 40, 0.9);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navMenu.open {
+  display: flex;
 }
 
 .listItem {
   color: white;
-  padding: 0.5rem 3rem;
-  margin: 0.25rem;
-  background: rgb(30, 30, 30);
+  padding: 0.7rem 2rem;
+  margin: 0.3rem 0;
+  background: rgba(30, 30, 50, 0.8);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 720px) {
-  .mobMenu {
-    display: flex;
+.listItem:hover {
+  background: rgba(80, 20, 100, 0.9);
+}
+
+@media screen and (max-width: 900px) {
+  .mobMenuIcon {
+    display: block;
   }
 
   .desktopMenu {
-    display: none;
-  }
-
-  .desktopMenuBtn {
     display: none;
   }
 }

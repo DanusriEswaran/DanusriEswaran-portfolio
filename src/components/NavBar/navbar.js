@@ -1,126 +1,198 @@
 import React, { useState } from "react";
 import "./navbar.css";
-import logo from "../../assets/logo.png";
-import menu from "../../assets/menu.png";
-import contactImg from "../../assets/ContactImg.png";
+import Lottie from "lottie-react";
+import animationData from "../../assets/Animation-logo.json"; // Replace with your Lottie JSON file
 import { Link } from "react-scroll";
+import {
+  FaHome,
+  FaUser,
+  FaBriefcase,
+  FaProjectDiagram,
+  FaGraduationCap,
+  FaTrophy,
+  FaEnvelope,
+  FaBars,
+  FaTimes,
+} from "react-icons/fa";
 
 const Navbar = () => {
-  const [showMenu, setshowMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <nav className="navbar">
-      <img src={logo} alt="logo" className="logo" />
+      <Lottie
+        animationData={animationData}
+        className="logo-animation"
+        loop={true}
+        autoplay={true}
+      />
+
+      {/* Desktop Menu */}
       <div className="desktopMenu">
         <Link
           activeClass="active"
-          to="intro"
+          to="home"
           spy={true}
           smooth={true}
           offset={-100}
           duration={500}
           className="desktopMenuListItem"
         >
+          <FaHome className="menuIcon" />
           Home
         </Link>
         <Link
           activeClass="active"
-          to="skills"
+          to="about"
           spy={true}
           smooth={true}
           offset={-50}
           duration={500}
           className="desktopMenuListItem"
         >
+          <FaUser className="menuIcon" />
           About
         </Link>
         <Link
           activeClass="active"
-          to="works"
+          to="experience"
           spy={true}
           smooth={true}
           offset={-50}
           duration={500}
           className="desktopMenuListItem"
         >
+          <FaBriefcase className="menuIcon" />
+          Experience
+        </Link>
+        <Link
+          activeClass="active"
+          to="projects"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          className="desktopMenuListItem"
+        >
+          <FaProjectDiagram className="menuIcon" />
           Projects
         </Link>
         <Link
           activeClass="active"
-          to="clients"
+          to="background"
           spy={true}
           smooth={true}
           offset={-50}
           duration={500}
           className="desktopMenuListItem"
         >
-          Portfolio
+          <FaGraduationCap className="menuIcon" />
+          Background
+        </Link>
+        <Link
+          activeClass="active"
+          to="milestones"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          className="desktopMenuListItem"
+        >
+          <FaTrophy className="menuIcon" />
+          Milestones
+        </Link>
+        <Link
+          activeClass="active"
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+          className="desktopMenuListItem"
+        >
+          <FaEnvelope className="menuIcon" />
+          Contact
         </Link>
       </div>
-      <button
-        className="desktopMenuBtn"
-        onClick={() => {
-          document
-            .getElementById("contact")
-            .scrollIntoView({ behavior: "smooth" });
-        }}
-      >
-        <img src={contactImg} alt="" className="desktopMenuImg" /> Contact me
-      </button>
 
-      <img
-        src={menu}
-        alt="menu"
-        className="mobMenu"
-        onClick={() => setshowMenu(!showMenu)}
-      />
-      <div className="navMenu" style={{ display: showMenu ? "flex" : "none" }}>
+      {/* Mobile Menu Icon */}
+      <div className="mobMenuIcon" onClick={() => setShowMenu(!showMenu)}>
+        {showMenu ? <FaTimes /> : <FaBars />}
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`navMenu ${showMenu ? "open" : ""}`}>
         <Link
           activeClass="active"
-          to="intro"
+          to="home"
           spy={true}
           smooth={true}
           offset={-100}
           duration={500}
           className="listItem"
-          onClick={() => setshowMenu(false)}
+          onClick={() => setShowMenu(false)}
         >
           Home
         </Link>
         <Link
           activeClass="active"
-          to="skills"
+          to="about"
           spy={true}
           smooth={true}
           offset={-50}
           duration={500}
           className="listItem"
-          onClick={() => setshowMenu(false)}
+          onClick={() => setShowMenu(false)}
         >
           About
         </Link>
         <Link
           activeClass="active"
-          to="works"
+          to="experience"
           spy={true}
           smooth={true}
           offset={-50}
           duration={500}
           className="listItem"
-          onClick={() => setshowMenu(false)}
+          onClick={() => setShowMenu(false)}
+        >
+          Experience
+        </Link>
+        <Link
+          activeClass="active"
+          to="projects"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          className="listItem"
+          onClick={() => setShowMenu(false)}
         >
           Projects
         </Link>
         <Link
           activeClass="active"
-          to="clients"
+          to="background"
           spy={true}
           smooth={true}
           offset={-50}
           duration={500}
           className="listItem"
-          onClick={() => setshowMenu(false)}
+          onClick={() => setShowMenu(false)}
         >
-          Portfolio
+          Background
+        </Link>
+        <Link
+          activeClass="active"
+          to="milestones"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          className="listItem"
+          onClick={() => setShowMenu(false)}
+        >
+          Milestones
         </Link>
         <Link
           activeClass="active"
@@ -130,7 +202,7 @@ const Navbar = () => {
           offset={-100}
           duration={500}
           className="listItem"
-          onClick={() => setshowMenu(false)}
+          onClick={() => setShowMenu(false)}
         >
           Contact
         </Link>

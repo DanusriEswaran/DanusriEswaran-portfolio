@@ -2,14 +2,41 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
-  background: transparent;
   font-family: "Poppins", sans-serif;
 }
 
 body {
-  background: rgb(30, 30, 30);
-  color: white;
-  overflow: hidden;
-  overflow-y: scroll;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
+  background: linear-gradient(120deg, #0e587d, #0a021f, #791099);
+  background-size: 300% 300%;
+  animation: auroraFlow 10s infinite alternate;
+}
+
+@keyframes auroraFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.neon-aurora {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 255, 0.3),
+    rgba(0, 255, 255, 0.3),
+    rgba(255, 204, 0, 0.2)
+  );
+  background-size: 300% 300%;
+  animation: auroraAnimation 8s infinite alternate ease-in-out;
+  filter: blur(80px);
 }
