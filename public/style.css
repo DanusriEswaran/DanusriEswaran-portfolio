@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
   width: 100vw;
   overflow-y: auto;
-  background: linear-gradient(120deg, #0e587d, #0a021f, #791099);
+  background: linear-gradient(120deg, #042b5f, #1f0366, #ba26e7);
   background-size: 300% 300%;
   animation: auroraFlow 10s infinite alternate;
 }

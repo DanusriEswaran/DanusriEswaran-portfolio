@@ -3,7 +3,7 @@ import "aos/dist/aos.css";
 
 import React, { useEffect } from "react";
 import Navbar from "./components/NavBar/navbar";
-// import SpaceBackground from "./components/SpaceBackground/spacebackground";
+import SpaceBackground from "./components/SpaceBackground/spacebackground";
 import Home from "./components/Home/home";
 import About from "./components/About/about";
 import Experience from "./components/Experience/experience";
@@ -24,7 +24,7 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* <SpaceBackground /> */}
+      <SpaceBackground />
       <Navbar />
       <Home />
       <About />
