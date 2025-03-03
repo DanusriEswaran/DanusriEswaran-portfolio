@@ -34,13 +34,14 @@ const SpaceBackground = () => {
         id="tsparticles"
         init={particlesInit}
         options={{
+          // fullScreen: { enable: false },
           fullScreen: { enable: true, zIndex: -2 },
           background: { color: "transparent" },
           particles: {
-            number: { value: 90 },
+            number: { value: 50 },
             move: {
               enable: true,
-              speed: 1.2,
+              speed: 0.8,
               random: true,
               outModes: { default: "bounce" },
             },
@@ -53,13 +54,13 @@ const SpaceBackground = () => {
                 style: "bold",
                 weight: "900",
                 fill: true,
-                fontSize: 120, // Make the letters bigger
               },
             },
             color: { value: "#00ffff" }, // Set all letters to cyan (or change as needed)
             opacity: {
-              value: 1,
-              anim: { enable: true, speed: 0.4, opacity_min: 0.3 },
+              value: 0.8,
+              anim: { enable: false },
+              // anim: { enable: true, speed: 0.4, opacity_min: 0.3 },
             },
             links: {
               enable: true,
@@ -67,7 +68,7 @@ const SpaceBackground = () => {
               color: "#00ffff",
               opacity: 0.9,
               width: 2,
-              shadow: { enable: true, blur: 10, color: "#00ffff" },
+              // shadow: { enable: true, blur: 10, color: "#00ffff" },
             },
           },
           interactivity: {
