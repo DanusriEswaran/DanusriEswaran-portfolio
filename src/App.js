@@ -24,7 +24,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <SpaceBackground />
+      {/* <SpaceBackground /> */}
       <Navbar />
       <Home />
       <About />
