@@ -1,14 +1,15 @@
-/* experience.css */
 #experience {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .experience-container {
   text-align: center;
-  max-width: 100vh;
+  max-width: 800px;
+  width: 90%;
 }
 
 h2 {
@@ -37,7 +38,8 @@ h2:hover {
 }
 
 .chatbox {
-  width: 750px;
+  width: 100%;
+  max-width: 750px;
   border-radius: 10px;
   padding: 20px;
   min-height: 200px;
@@ -57,57 +59,70 @@ h2:hover {
   padding: 10px;
   border-radius: 5px;
   background: #a56fad;
-  font-size: 18px;
+  font-size: 17px;
+  color: white;
 }
 
 .chat-question {
   font-weight: bold;
-  color: white;
 }
-
-.chat-answer {
-  margin-top: 2px;
-  color: white;
-}
-
-/* {
-  margin-top: 10px;
-  padding: 12px 20px;
-  border: none;
-  background: #b21dd7;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-} */
-
-/* .chat-button:hover {
-  background: #c66ddd;
-} */
 
 .chat-button,
 .certificate-button {
-  text-decoration: none;
-  align-items: center;
-  justify-content: center;
   background: rgb(96, 4, 124);
   color: white;
   padding: 12px 20px;
   margin-top: 10px;
-  text-decoration: none;
   border-radius: 5px;
   transition: 0.3s ease-in-out;
-}
-
-.chat-button,
-.certificate-button svg {
   font-size: 16px;
-  margin-right: 5px;
+  cursor: pointer;
 }
 
-.chat-button:hover {
-  background: rgb(213, 32, 226);
-}
-
+.chat-button:hover,
 .certificate-button:hover {
   background: rgb(213, 32, 226);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 35px;
+  }
+
+  .chatbox {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .chat-message {
+    font-size: 16px;
+  }
+
+  .chat-button,
+  .certificate-button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 28px;
+  }
+
+  .chatbox {
+    padding: 15px;
+  }
+
+  .chat-message {
+    font-size: 14px;
+  }
+
+  .chat-button,
+  .certificate-button {
+    font-size: 12px;
+    padding: 8px;
+  }
 }

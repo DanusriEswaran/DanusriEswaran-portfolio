@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./navbar.css";
 import Lottie from "lottie-react";
-import animationData from "../../assets/Animation-logo.json"; // Replace with your Lottie JSON file
+import animationData from "../../assets/Animation-logo.json";
 import { Link } from "react-scroll";
 import {
   FaHome,

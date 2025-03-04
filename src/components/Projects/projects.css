@@ -3,12 +3,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  padding: 50px 20px;
   width: 100%;
 }
 
 h2 {
-  margin-top: 50px;
   text-align: center;
   font-size: 45px;
   color: transparent;
@@ -22,8 +21,6 @@ h2:hover {
 }
 
 .title-line {
-  justify-content: center;
-  align-items: center;
   width: 40%;
   height: 2px;
   background-color: white;
@@ -32,17 +29,29 @@ h2:hover {
 
 .projects-container {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
+  justify-content: center; /* Centers items horizontally */
+  gap: 20px; /* Adds space between cards */
+}
+
+.project-card {
+  flex: 1 1 300px; /* Adjusts width dynamically */
+  max-width: 320px; /* Prevents cards from stretching too much */
+}
+
+/* Mobile View - Stacked Cards */
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 .flip-card {
   background-color: transparent;
-  width: 250px;
-  height: 300px;
+  width: 300px;
+  height: 380px;
   perspective: 1000px;
+  border-radius: 12px;
 }
 
 .flip-card-inner {
@@ -67,8 +76,11 @@ h2:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  flex-direction: column;
+  border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
 }
 
 .flip-card-front {
@@ -76,7 +88,14 @@ h2:hover {
   color: white;
   font-size: 18px;
   font-weight: bold;
-  padding: 20px;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 .flip-card-back {
@@ -84,6 +103,21 @@ h2:hover {
   color: white;
   font-size: 16px;
   transform: rotateY(180deg);
-  flex-direction: column;
-  padding: 20px;
+}
+
+.tech-stack {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.tech-tag {
+  background-color: #ff4081;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: bold;
 }

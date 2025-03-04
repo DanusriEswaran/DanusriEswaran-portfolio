@@ -1,8 +1,9 @@
 .navbar {
-  height: 5rem;
+  height: 3.5rem;
   width: 100vw;
+  max-width: 100%;
   font-family: "Noto Serif Todhri", serif;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,32 +11,35 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(10, 10, 30, 0.8);
+  background: rgba(10, 10, 30, 0.9);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   transition: background 0.3s ease-in-out;
 }
 
 .logo-animation {
-  height: 200%;
+  height: 50px;
   width: auto;
 }
 
+/* Desktop Menu */
 .desktopMenu {
   display: flex;
   align-items: center;
 }
 
 .menuIcon {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .desktopMenuListItem {
-  margin: 1rem 1.5rem;
+  margin: 0.5rem 1rem;
   cursor: pointer;
   color: rgb(127, 10, 166);
   font-size: 1rem;
   transition: color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
 }
 
 .desktopMenuListItem:hover,
@@ -44,17 +48,9 @@
   border-bottom: 2px solid rgb(150, 50, 200);
 }
 
-.desktopMenuListItem,
-.listItem {
-  text-decoration: none;
-  font-family: "Noto Serif Todhri", serif;
-  font-size: large;
-  font-weight: 500;
-  font-style: normal;
-  color: rgb(241, 145, 225);
-}
-
+/* Mobile Menu Icon */
 .mobMenuIcon {
+  font-size: 1.8rem;
   color: rgb(218, 45, 149);
   cursor: pointer;
   display: none;
@@ -62,17 +58,16 @@
 
 /* Mobile Menu */
 .navMenu {
-  max-height: 300px;
-  overflow-y: auto;
   position: absolute;
-  top: 4rem;
-  right: 2rem;
+  top: 3.8rem;
+  right: 1rem;
   display: none;
   flex-direction: column;
-  padding: 0.8rem;
-  background: rgba(20, 20, 40, 0.9);
+  padding: 0.5rem;
+  background: rgba(20, 20, 40, 0.95);
   border-radius: 10px;
-  transition: all 0.3s ease-in-out;
+  width: 80%;
+  max-width: 300px;
 }
 
 .navMenu.open {
@@ -80,25 +75,46 @@
 }
 
 .listItem {
+  font-size: 0.9rem;
+  padding: 0.7rem 1.5rem;
   color: white;
-  padding: 0.7rem 2rem;
-  margin: 0.3rem 0;
-  background: rgba(30, 30, 50, 0.8);
+  margin: 0.2rem 0;
+  background: rgba(30, 30, 50, 0.85);
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
+  text-align: center;
 }
 
 .listItem:hover {
   background: rgba(80, 20, 100, 0.9);
 }
 
+/* Responsive Adjustments */
 @media screen and (max-width: 900px) {
   .mobMenuIcon {
     display: block;
   }
-
   .desktopMenu {
     display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+
+  .logo-animation {
+    height: 40px;
+  }
+
+  .mobMenuIcon {
+    font-size: 1.5rem;
+  }
+
+  .listItem {
+    font-size: 0.85rem;
+    padding: 0.6rem;
   }
 }
