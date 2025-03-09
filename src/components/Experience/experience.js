@@ -13,7 +13,11 @@ import {
 
 const chatbotData = [
   { icon: faBuilding, question: "Company", answer: "NGP Websmart Pvt Ltd" },
-  { icon: faClock, question: "Duration", answer: "July 2024 - Nov 2024" },
+  {
+    icon: faClock,
+    question: "Duration",
+    answer: "July 2024 - Nov 2024 (5 months) ",
+  },
   { icon: faUser, question: "Role", answer: "Software Developer Intern" },
   {
     icon: faProjectDiagram,
@@ -25,7 +29,7 @@ const chatbotData = [
     icon: faTools,
     question: "Work Summary",
     answer:
-      "Enhanced the existing template creation feature by adding extra functionalities. Developed graphs, charts, and Excel export functionality for email performance analysis.Worked with teams to ensure multi-user access was secure and user-friendly.",
+      "Enhanced the existing template creation feature by adding extra functionalities. Developed graphs, charts, and Excel export functionality for email performance analysis. Optimized data visualization to improve readability and insights.",
   },
   {
     icon: faCode,

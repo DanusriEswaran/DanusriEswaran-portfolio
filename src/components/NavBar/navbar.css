@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=DM+Serif+Display:ital@0;1&family=Noto+Serif+Todhri&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Smooch+Sans:wght@100..900&family=Space+Grotesk:wght@300..700&family=Spicy+Rice&display=swap");
+
 .navbar {
   height: 3.5rem;
   width: 100vw;
@@ -33,9 +35,10 @@
 }
 
 .desktopMenuListItem {
+  font-family: "DM Serif Display", serif;
   margin: 0.5rem 1rem;
   cursor: pointer;
-  color: rgb(127, 10, 166);
+  color: rgb(221, 65, 245);
   font-size: 1rem;
   transition: color 0.3s ease-in-out;
   display: flex;
@@ -45,7 +48,7 @@
 .desktopMenuListItem:hover,
 .active {
   color: rgb(255, 100, 255);
-  border-bottom: 2px solid rgb(150, 50, 200);
+  border-bottom: 2px solid rgb(255, 100, 255);
 }
 
 /* Mobile Menu Icon */

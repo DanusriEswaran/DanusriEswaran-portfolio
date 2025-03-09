@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./navbar.css";
 import Lottie from "lottie-react";
 import animationData from "../../assets/Animation-logo.json";
-import { Link } from "react-scroll";
+import { Link, Events, scrollSpy } from "react-scroll";
 import {
   FaHome,
   FaUser,
   FaBriefcase,
   FaProjectDiagram,
-  FaGraduationCap,
   FaTrophy,
   FaEnvelope,
   FaBars,
@@ -17,6 +16,17 @@ import {
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    // Track active section changes
+    Events.scrollEvent.register("begin", (to) => setActiveSection(to));
+    scrollSpy.update();
+
+    return () => {
+      Events.scrollEvent.remove("begin");
+    };
+  }, []);
 
   return (
     <nav className="navbar">
@@ -36,7 +46,9 @@ const Navbar = () => {
           smooth={true}
           offset={-100}
           duration={500}
-          className="desktopMenuListItem"
+          className={`desktopMenuListItem ${
+            activeSection === "home" ? "active" : ""
+          }`}
         >
           <FaHome className="menuIcon" />
           Home
@@ -46,9 +58,11 @@ const Navbar = () => {
           to="about"
           spy={true}
           smooth={true}
-          offset={-50}
+          offset={-100}
           duration={500}
-          className="desktopMenuListItem"
+          className={`desktopMenuListItem ${
+            activeSection === "about" ? "active" : ""
+          }`}
         >
           <FaUser className="menuIcon" />
           About
@@ -58,9 +72,11 @@ const Navbar = () => {
           to="experience"
           spy={true}
           smooth={true}
-          offset={-50}
+          offset={-100}
           duration={500}
-          className="desktopMenuListItem"
+          className={`desktopMenuListItem ${
+            activeSection === "experience" ? "active" : ""
+          }`}
         >
           <FaBriefcase className="menuIcon" />
           Experience
@@ -70,33 +86,25 @@ const Navbar = () => {
           to="projects"
           spy={true}
           smooth={true}
-          offset={-50}
+          offset={-100}
           duration={500}
-          className="desktopMenuListItem"
+          className={`desktopMenuListItem ${
+            activeSection === "projects" ? "active" : ""
+          }`}
         >
           <FaProjectDiagram className="menuIcon" />
           Projects
         </Link>
         <Link
           activeClass="active"
-          to="background"
-          spy={true}
-          smooth={true}
-          offset={-50}
-          duration={500}
-          className="desktopMenuListItem"
-        >
-          <FaGraduationCap className="menuIcon" />
-          Background
-        </Link>
-        <Link
-          activeClass="active"
           to="milestones"
           spy={true}
           smooth={true}
-          offset={-50}
+          offset={-100}
           duration={500}
-          className="desktopMenuListItem"
+          className={`desktopMenuListItem ${
+            activeSection === "milestones" ? "active" : ""
+          }`}
         >
           <FaTrophy className="menuIcon" />
           Milestones
@@ -108,7 +116,9 @@ const Navbar = () => {
           smooth={true}
           offset={-100}
           duration={500}
-          className="desktopMenuListItem"
+          className={`desktopMenuListItem ${
+            activeSection === "contact" ? "active" : ""
+          }`}
         >
           <FaEnvelope className="menuIcon" />
           Contact
@@ -129,7 +139,7 @@ const Navbar = () => {
           smooth={true}
           offset={-100}
           duration={500}
-          className="listItem"
+          className={`listItem ${activeSection === "home" ? "active" : ""}`}
           onClick={() => setShowMenu(false)}
         >
           Home
@@ -141,7 +151,7 @@ const Navbar = () => {
           smooth={true}
           offset={-50}
           duration={500}
-          className="listItem"
+          className={`listItem ${activeSection === "about" ? "active" : ""}`}
           onClick={() => setShowMenu(false)}
         >
           About
@@ -153,7 +163,9 @@ const Navbar = () => {
           smooth={true}
           offset={-50}
           duration={500}
-          className="listItem"
+          className={`listItem ${
+            activeSection === "experience" ? "active" : ""
+          }`}
           onClick={() => setShowMenu(false)}
         >
           Experience
@@ -165,22 +177,10 @@ const Navbar = () => {
           smooth={true}
           offset={-50}
           duration={500}
-          className="listItem"
+          className={`listItem ${activeSection === "projects" ? "active" : ""}`}
           onClick={() => setShowMenu(false)}
         >
           Projects
-        </Link>
-        <Link
-          activeClass="active"
-          to="background"
-          spy={true}
-          smooth={true}
-          offset={-50}
-          duration={500}
-          className="listItem"
-          onClick={() => setShowMenu(false)}
-        >
-          Background
         </Link>
         <Link
           activeClass="active"
@@ -189,7 +189,9 @@ const Navbar = () => {
           smooth={true}
           offset={-50}
           duration={500}
-          className="listItem"
+          className={`listItem ${
+            activeSection === "milestones" ? "active" : ""
+          }`}
           onClick={() => setShowMenu(false)}
         >
           Milestones
@@ -201,7 +203,7 @@ const Navbar = () => {
           smooth={true}
           offset={-100}
           duration={500}
-          className="listItem"
+          className={`listItem ${activeSection === "contact" ? "active" : ""}`}
           onClick={() => setShowMenu(false)}
         >
           Contact

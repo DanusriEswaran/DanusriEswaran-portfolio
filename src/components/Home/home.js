@@ -19,7 +19,7 @@ const Home = () => {
           <h1 className="hello">Hello,👋</h1>
           <h2>I'm DANUSRI</h2>
           <p className="description">
-            A passionate tech explorer, driven to innovate and push boundaries.
+            Exploring technology, one line of code at a time.
           </p>
         </div>
       </div>

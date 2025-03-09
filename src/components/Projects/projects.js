@@ -3,36 +3,37 @@ import "./projects.css";
 import fileZipperImg from "../../assets/file-zipper.jpg";
 import cloudStorageImg from "../../assets/secure-cloud.jpg";
 import cinemaImg from "../../assets/cinema-suggestions.jpg";
-import imageIdentifierImg from "../../assets/image-identifier.jpg";
+import handGesture from "../../assets/hand-gesture.jpg";
+import Skills from "../Projects/skills";
 
 const projects = [
   {
     title: "File Zipper",
     description:
       "A file compression technique using Huffman coding in Python to efficiently compress and decompress files while storing and retrieving data.",
-    tech: ["#Python"],
+    tech: ["Python", "HuffmanCoding"],
     image: fileZipperImg,
   },
   {
     title: "Secure Cloud Storage",
     description:
-      "Implemented robust encryption for data security, user authentication for secure logins, and efficient file handling with format validation and size restrictions.",
-    tech: ["#Python", "#Flask", "#Angular"],
+      "A web-based platform for users to upload, store, encrypt, and manage files with user authentication and secure remote access.",
+    tech: ["Flask", "MySQL", "FTPLib", "HTML, CSS, JS"],
     image: cloudStorageImg,
   },
   {
     title: "Cinema Suggestions",
     description:
       "Developed a collaborative filtering movie recommendation system using KNN, combining user ratings and tags for better recommendations.",
-    tech: ["#Python", "#Pandas", "#PowerBI"],
+    tech: ["Python", "Pandas", "PowerBI"],
     image: cinemaImg,
   },
   {
-    title: "Image Identifier",
+    title: "Hand Gesture Recognition",
     description:
-      "Enabled exporting email analytics data to Excel for better reporting.",
-    tech: ["#SheetJS", "#React", "#Express.js"],
-    image: imageIdentifierImg,
+      "Developed a machine learning model with TensorFlow and OpenCV to accurately identify and classify hand gestures.",
+    tech: ["TensorFlow", "Keras", "OpenCV", "NumPy"],
+    image: handGesture,
   },
 ];
 
@@ -67,6 +68,7 @@ const Projects = () => {
           </div>
         ))}
       </div>
+      <Skills />
     </section>
   );
 };

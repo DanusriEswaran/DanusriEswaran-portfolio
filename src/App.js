@@ -8,8 +8,7 @@ import Home from "./components/Home/home";
 import About from "./components/About/about";
 import Experience from "./components/Experience/experience";
 import Projects from "./components/Projects/projects";
-import Background from "./components/Background/background";
-import Milestones from "./components/Milestones/milestons";
+import Milestones from "./components/Milestones/milestones";
 import Contact from "./components/Contact/contact";
 import Footer from "./components/Footer/footer";
 
@@ -30,7 +29,6 @@ const App = () => {
       <About />
       <Experience />
       <Projects />
-      <Background />
       <Milestones />
       <Contact />
       <Footer />

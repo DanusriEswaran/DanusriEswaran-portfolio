@@ -49,12 +49,11 @@ const About = () => {
           <hr />
           <br />
           <p>
-            I'm a driven and passionate student with an interest in technology
-            and innovation. I have established a solid core of programming and
-            problem-solving skills through practical projects and ongoing
-            learning. I work best in fast-paced, team-based settings where I can
-            bring new ideas and expand my abilities, always looking for the next
-            challenge.
+            I'm a passionate student eager to explore technology and innovation.
+            Through hands-on projects and continuous learning, I've developed my
+            programming and problem-solving skills. I thrive in dynamic,
+            collaborative environments where I can contribute fresh ideas, grow
+            my expertise, and take on new challenges.
           </p>
           <a href={resume} download className="resume-btn">
             <FaDownload /> Download Resume

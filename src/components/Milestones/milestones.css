@@ -1,5 +1,134 @@
-#milestones {
-  justify-content: center;
+.milestones-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.milestone-overlay {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  color: white;
+  overflow: hidden;
+}
+
+.milestone-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(05px);
+  z-index: 0;
+}
+
+/* Content inside the overlay */
+.milestone-content {
+  position: relative;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+/* List styling */
+.milestone-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual items */
+.milestone-content li {
+  display: flex;
   align-items: center;
-  height: 100vh;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.milestone-content li:last-child {
+  border-bottom: none;
+}
+
+/* Image styling */
+.milestone-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+/* Text container */
+.milestone-text {
+  flex-grow: 1;
+}
+
+/* Title of the item */
+.milestone-text strong {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+/* Description styling */
+.milestone-text p {
+  margin: 5px 0;
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+/* Links */
+.milestone-text a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.milestone-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .milestone-overlay {
+    padding: 20px;
+  }
+
+  .milestone-content {
+    padding: 15px;
+  }
+
+  .milestone-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .milestone-content li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .milestone-image {
+    width: 0.7;
+    height: auto;
+    margin-bottom: 10px;
+  }
+}
+
+.milestone-content h2 {
+  text-align: center;
+  font-size: 45px;
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+  transition: color 0.3s ease-in-out, -webkit-text-stroke 0.3s ease-in-out;
+}
+
+.milestone-content h2:hover {
+  color: rgb(230, 37, 237);
+  -webkit-text-stroke: 0px;
 }

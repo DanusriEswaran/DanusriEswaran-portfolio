@@ -1,4 +1,3 @@
-/* Container Styling */
 .intro-container {
   display: flex;
   align-items: center;
@@ -9,9 +8,8 @@
   box-sizing: border-box;
 }
 
-/* Lottie Animation Styling */
 .image-section {
-  flex: 1;
+  flex: 1.5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,17 +17,19 @@
 
 .laptop-animation {
   width: 100%;
-  max-width: 700px;
+  max-width: 600px;
   height: auto;
+  transform: scale(1.5);
 }
 
 .text-section {
   flex: 1;
   text-align: left;
   max-width: 500px;
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
 }
-
 .hello {
   font-family: cursive;
   font-size: 2.5rem;
@@ -58,7 +58,6 @@
   margin-top: 10px;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .intro-container {
     flex-direction: column;
@@ -68,7 +67,7 @@
   }
 
   .image-section {
-    order: -1; /* Move image on top */
+    order: -1;
   }
 
   .laptop-animation {
@@ -126,5 +125,17 @@
 
   .description {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .laptop-animation {
+    max-width: 100%; /* Make it fill the available space */
+  }
+}
+
+@media (max-width: 480px) {
+  .laptop-animation {
+    max-width: 90%; /* Reduce size for smaller screens */
   }
 }
