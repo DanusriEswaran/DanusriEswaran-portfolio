@@ -7,8 +7,6 @@ import cloudDataImg from "../../assets/cloudData.jpeg";
 import leadershipBg from "../../assets/leadership.jpg";
 import datalyticsImg from "../../assets/datalytics.jpeg";
 import FossImg from "../../assets/Foss.jpeg";
-import certificateImg from "../../assets/certificate.jpg";
-import algorithmImg from "../../assets/algorithms.jpeg";
 
 const milestones = [
   {
@@ -50,18 +48,6 @@ const milestones = [
         linkedin:
           "https://www.linkedin.com/company/datalyticscit/posts/?feedView=all",
         image: datalyticsImg,
-      },
-    ],
-  },
-  {
-    category: "CERTIFICATION",
-    image: certificateImg,
-    items: [
-      {
-        title: "Fundamental Algorithms: Design and Analysis",
-        description:
-          "Certified in fundamental algorithm design and analysis, focusing on efficiency and optimization.",
-        image: algorithmImg,
       },
     ],
   },

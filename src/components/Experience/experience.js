@@ -12,7 +12,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const chatbotData = [
-  { icon: faBuilding, question: "Company", answer: "NGP Websmart Pvt Ltd" },
+  { icon: faBuilding, question: "Company", answer: "NGP Websmart Pvt.Ltd." },
   {
     icon: faClock,
     question: "Duration",
@@ -29,7 +29,7 @@ const chatbotData = [
     icon: faTools,
     question: "Work Summary",
     answer:
-      "Enhanced the existing template creation feature by adding extra functionalities. Developed graphs, charts, and Excel export functionality for email performance analysis. Optimized data visualization to improve readability and insights.",
+      "Enhanced template creation by adding advanced functionalities. Developed interactive graphs, charts, and Excel export features for comprehensive email performance analysis. Optimized data visualization for better readability and actionable insights.",
   },
   {
     icon: faCode,

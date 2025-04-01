@@ -1,6 +1,6 @@
 import React from "react";
 import "./footer.css";
-import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -30,6 +30,13 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <FaGithub />
+          </a>
+          <a
+            href="mailto:danusrieswaran02@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaEnvelope />
           </a>
         </div>
       </div>

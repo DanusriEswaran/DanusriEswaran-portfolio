@@ -2,38 +2,38 @@ import React from "react";
 import "./projects.css";
 import fileZipperImg from "../../assets/file-zipper.jpg";
 import cloudStorageImg from "../../assets/secure-cloud.jpg";
-import cinemaImg from "../../assets/cinema-suggestions.jpg";
-import handGesture from "../../assets/hand-gesture.jpg";
+import Finsight from "../../assets/FinSight.jpg";
+import taskManagement from "../../assets/TaskManagement.jpg";
 import Skills from "../Projects/skills";
 
 const projects = [
+  {
+    title: "FinSight",
+    description:
+      "Expanded a financial analytics system integrating real-time data processing, machine learning, and Power BI for actionable insights. Designed KPI tracking, trend analysis, and anomaly detection to enhance financial decision-making.",
+    tech: ["Python", "Pandas", "PostgreSQL", "PowerBI", "Machine Learning"],
+    image: Finsight,
+  },
+  {
+    title: "Task Management",
+    description:
+      "An advanced task management application enabling users to create, edit, and track tasks with categories and statuses. Includes an admin dashboard for task assignment and monitoring.",
+    tech: ["VueJS", "Vuetify", "AdonisJS", "PostgreSQL"],
+    image: taskManagement,
+  },
+  {
+    title: "Secure Cloud Storage",
+    description:
+      "A web-based platform for users to upload, store, encrypt, and manage files with user authentication and secure remote access.",
+    tech: ["Python", "Flask", "MySQL", "HTML", "CSS"],
+    image: cloudStorageImg,
+  },
   {
     title: "File Zipper",
     description:
       "A file compression technique using Huffman coding in Python to efficiently compress and decompress files while storing and retrieving data.",
     tech: ["Python", "HuffmanCoding"],
     image: fileZipperImg,
-  },
-  {
-    title: "Secure Cloud Storage",
-    description:
-      "A web-based platform for users to upload, store, encrypt, and manage files with user authentication and secure remote access.",
-    tech: ["Flask", "MySQL", "FTPLib", "HTML, CSS, JS"],
-    image: cloudStorageImg,
-  },
-  {
-    title: "Cinema Suggestions",
-    description:
-      "Developed a collaborative filtering movie recommendation system using KNN, combining user ratings and tags for better recommendations.",
-    tech: ["Python", "Pandas", "PowerBI"],
-    image: cinemaImg,
-  },
-  {
-    title: "Hand Gesture Recognition",
-    description:
-      "Developed a machine learning model with TensorFlow and OpenCV to accurately identify and classify hand gestures.",
-    tech: ["TensorFlow", "Keras", "OpenCV", "NumPy"],
-    image: handGesture,
   },
 ];
 
