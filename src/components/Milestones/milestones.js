@@ -4,7 +4,6 @@ import "./milestones.css";
 import researchBg from "../../assets/researchPaper.jpg";
 import compressionImg from "../../assets/compression.jpg";
 import cloudDataImg from "../../assets/cloudData.jpeg";
-import leadershipBg from "../../assets/leadership.jpg";
 import datalyticsImg from "../../assets/datalytics.jpeg";
 import FossImg from "../../assets/Foss.jpeg";
 
@@ -31,7 +30,7 @@ const milestones = [
   },
   {
     category: "ROLES & RESPONSIBILITIES",
-    image: leadershipBg,
+    image: researchBg,
     items: [
       {
         title: "Secretary - FOSS(Free and Open Source) Club",
